@@ -5,21 +5,15 @@ import { Component } from "@angular/core";
   templateUrl: './product-list.component.html'
 })
 
-// PS Angular 5.5 - Binding w/ Interpolation
-// pageTitle is bound to the HTML of same name, replacing
-// 'Product List' at line 3 w/ the value below.
-
-// PS Angular 5.6 - Adding Logic w/ Directives: *ngIf
-// Create product[] with type of 'any' and pass the
-// products in. *ngIf, Angular's built-in structural
-// directive, allows the products[] to be displayed
-// if there's products in it (i.e., length == true).
-// This directive is on line 18 in the HTML file.
-
-// PS Angular 5.7 - Adding Logic w/ Directives: *ngFor
-// 
+// PS Angular 6.2 - Property Binding
+// Added lines 36-39 in the HTML file to bind the
+// properties of the product images. They're bound by
+// their template expressions just below: imageWidth,
+// imageMargin.
 export class ProductListComponent {
   pageTitle: string = 'Product List';
+  imageWidth: number = 50;
+  imageMargin: number = 2;
   products: any[] = [
       {
         "productId": 1,
