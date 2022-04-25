@@ -10,10 +10,17 @@ import { Component } from "@angular/core";
 // properties of the product images. They're bound by
 // their template expressions just below: imageWidth,
 // imageMargin.
+
+// PS Angular 6.3 - Handling Events w/ Event Binding
+// Add the event function at the bottom of your class.
+// The logic to toggle the button on and off, along
+// with change the display text, is in the HTML file
+// on lines 23-24.
 export class ProductListComponent {
   pageTitle: string = 'Product List';
   imageWidth: number = 50;
   imageMargin: number = 2;
+  showImage: boolean = false;
   products: any[] = [
       {
         "productId": 1,
@@ -66,4 +73,8 @@ export class ProductListComponent {
         "imageUrl": "assets/images/xbox-controller.png"
       }
   ];
+
+  toggleImage(): void {
+    this.showImage = !this.showImage;
+  }
 }
