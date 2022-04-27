@@ -18,11 +18,13 @@ import { Component } from "@angular/core";
 // on lines 23-24.
 
 // PS Angular 6.4 - Handling Input w/ 2-Way Binding
+// Start by adding component class property for listFilter:
 export class ProductListComponent {
   pageTitle: string = 'Product List';
   imageWidth: number = 50;
   imageMargin: number = 2;
   showImage: boolean = false;
+  listFilter: string = 'cart';
   products: any[] = [
       {
         "productId": 1,
