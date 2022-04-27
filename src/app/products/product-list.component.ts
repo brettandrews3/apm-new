@@ -16,6 +16,8 @@ import { Component } from "@angular/core";
 // The logic to toggle the button on and off, along
 // with change the display text, is in the HTML file
 // on lines 23-24.
+
+// PS Angular 6.4 - Handling Input w/ 2-Way Binding
 export class ProductListComponent {
   pageTitle: string = 'Product List';
   imageWidth: number = 50;
