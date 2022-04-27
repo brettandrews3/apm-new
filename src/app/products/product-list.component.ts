@@ -1,31 +1,23 @@
 import { Component } from "@angular/core";
+import { IProduct } from "./product";
 
 @Component({
   selector: 'pm-products',
   templateUrl: './product-list.component.html'
 })
 
-// PS Angular 6.2 - Property Binding
-// Added lines 36-39 in the HTML file to bind the
-// properties of the product images. They're bound by
-// their template expressions just below: imageWidth,
-// imageMargin.
-
-// PS Angular 6.3 - Handling Events w/ Event Binding
-// Add the event function at the bottom of your class.
-// The logic to toggle the button on and off, along
-// with change the display text, is in the HTML file
-// on lines 23-24.
-
-// PS Angular 6.4 - Handling Input w/ 2-Way Binding
-// Start by adding component class property for listFilter:
+// Angular 7.2 - Defining Interfaces
+// We created the interface IProduct and set products
+// below to inherit the interface. This applied strict
+// typing to ProductListComponent and prevented runtime
+// errors related to type.
 export class ProductListComponent {
   pageTitle: string = 'Product List';
   imageWidth: number = 50;
   imageMargin: number = 2;
   showImage: boolean = false;
   listFilter: string = 'cart';
-  products: any[] = [
+  products: IProduct[] = [
       {
         "productId": 1,
         "productName": "Leaf Rake",
