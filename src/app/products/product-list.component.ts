@@ -16,13 +16,24 @@ import { IProduct } from "./product";
 // Angular 7.3 - Encapsulating Component Styles
 // Angular 7.4 - Using Lifestyle Hooks
 // Angular 7.5 - Building Custom Pipes
+// Angular 7.6 - Getters and Setters
 
 export class ProductListComponent implements OnInit {
   pageTitle: string = 'Product List';
   imageWidth: number = 50;
   imageMargin: number = 2;
   showImage: boolean = false;
-  listFilter: string = 'cart';
+  //listFilter: string = 'cart';
+
+  private _listFilter: string = '';
+  get listFilter(): string {
+    return this._listFilter;
+  }
+  set listFilter(value: string) {
+    this._listFilter = value;
+    console.log('In setter:', value);
+  }
+
   products: IProduct[] = [
       {
         "productId": 1,
@@ -81,7 +92,7 @@ export class ProductListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.listFilter = 'cart';
+    console.log('In OnInit');
   }
 }
 
