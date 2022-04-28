@@ -17,6 +17,7 @@ import { IProduct } from "./product";
 // Angular 7.4 - Using Lifestyle Hooks
 // Angular 7.5 - Building Custom Pipes
 // Angular 7.6 - Getters and Setters
+// Angular 7.7 - Filtering and Arrow Functions
 
 export class ProductListComponent implements OnInit {
   pageTitle: string = 'Product List';
@@ -32,8 +33,10 @@ export class ProductListComponent implements OnInit {
   set listFilter(value: string) {
     this._listFilter = value;
     console.log('In setter:', value);
+    this.filteredProducts = this.performFilter(value);
   }
 
+  filteredProducts: IProduct[] = [];
   products: IProduct[] = [
       {
         "productId": 1,
@@ -93,6 +96,12 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('In OnInit');
+  }
+
+  performFilter(filterBy: string): IProduct[] {
+    filterBy.toLocaleLowerCase();
+    return this.products.filter((product: IProduct) =>
+      product.productName.toLocaleLowerCase().includes(filterBy));
   }
 }
 
