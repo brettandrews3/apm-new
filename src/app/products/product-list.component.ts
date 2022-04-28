@@ -3,7 +3,8 @@ import { IProduct } from "./product";
 
 @Component({
   selector: 'pm-products',
-  templateUrl: './product-list.component.html'
+  templateUrl: './product-list.component.html',
+  styleUrls: ['./product-list.component.css']
 })
 
 // Angular 7.2 - Defining Interfaces
@@ -11,6 +12,9 @@ import { IProduct } from "./product";
 // below to inherit the interface. This applied strict
 // typing to ProductListComponent and prevented runtime
 // errors related to type.
+
+// Angular 7.3 - Encapsulating Component Styles
+
 export class ProductListComponent {
   pageTitle: string = 'Product List';
   imageWidth: number = 50;
