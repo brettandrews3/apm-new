@@ -15,6 +15,7 @@ import { IProduct } from "./product";
 
 // Angular 7.3 - Encapsulating Component Styles
 // Angular 7.4 - Using Lifestyle Hooks
+// Angular 7.5 - Building Custom Pipes
 
 export class ProductListComponent implements OnInit {
   pageTitle: string = 'Product List';
