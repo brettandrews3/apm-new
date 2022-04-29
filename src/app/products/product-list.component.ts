@@ -8,6 +8,7 @@ import { IProduct } from "./product";
 })
 
 // Angular 8.2 - Building a Nested Component
+// Angular 8.3  Using a Nested Component
 
 export class ProductListComponent implements OnInit {
   pageTitle: string = 'Product List';
