@@ -7,17 +7,7 @@ import { IProduct } from "./product";
   styleUrls: ['./product-list.component.css']
 })
 
-// Angular 7.2 - Defining Interfaces
-// We created the interface IProduct and set products
-// below to inherit the interface. This applied strict
-// typing to ProductListComponent and prevented runtime
-// errors related to type.
-
-// Angular 7.3 - Encapsulating Component Styles
-// Angular 7.4 - Using Lifestyle Hooks
-// Angular 7.5 - Building Custom Pipes
-// Angular 7.6 - Getters and Setters
-// Angular 7.7 - Filtering and Arrow Functions
+// Angular 8.2 - Building a Nested Component
 
 export class ProductListComponent implements OnInit {
   pageTitle: string = 'Product List';
