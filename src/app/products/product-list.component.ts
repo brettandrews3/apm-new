@@ -11,6 +11,7 @@ import { IProduct } from "./product";
 // Angular 8.3 - Using a Nested Component
 // Angular 8.4 - Passing Data to a Nested Component w/ @Input
 // Angular 8.5 - Handling Events
+// Angular 8.6 - Passing Data Using @Output
 
 export class ProductListComponent implements OnInit {
   pageTitle: string = 'Product List';
@@ -89,6 +90,10 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('In OnInit');
+  }
+
+  onRatingClicked(message: string): void {
+    this.pageTitle = 'Product List: ' + message;
   }
 
   performFilter(filterBy: string): IProduct[] {
