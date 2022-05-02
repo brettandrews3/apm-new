@@ -10,6 +10,7 @@ import { IProduct } from "./product";
 // Angular 8.2 - Building a Nested Component
 // Angular 8.3 - Using a Nested Component
 // Angular 8.4 - Passing Data to a Nested Component w/ @Input
+// Angular 8.5 - Handling Events
 
 export class ProductListComponent implements OnInit {
   pageTitle: string = 'Product List';
