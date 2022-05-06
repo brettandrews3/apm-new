@@ -1,33 +1,13 @@
-import { Component, OnInit } from "@angular/core";
+import { Injectable } from "@angular/core";
 import { IProduct } from "./product";
 
-@Component({
-  selector: 'pm-products',
-  templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
-})
-
-// Angular 9.3 - Building a Service
-
-export class ProductListComponent implements OnInit {
-  pageTitle: string = 'Product List';
-  imageWidth: number = 50;
-  imageMargin: number = 2;
-  showImage: boolean = false;
-  //listFilter: string = 'cart';
-
-  private _listFilter: string = '';
-  get listFilter(): string {
-    return this._listFilter;
-  }
-  set listFilter(value: string) {
-    this._listFilter = value;
-    console.log('In setter:', value);
-    this.filteredProducts = this.performFilter(value);
-  }
-
-  filteredProducts: IProduct[] = [];
-  products: IProduct[] = [
+// By keeping the product data in the service here, we
+// take data management away from the individual Component.
+// This makes it easier to modify|refuse the logic.
+@Injectable()
+export class ProductService {
+  getProducts(): IProduct[] {
+    return [
       {
         "productId": 1,
         "productName": "Leaf Rake",
@@ -78,24 +58,7 @@ export class ProductListComponent implements OnInit {
         "starRating": 4.6,
         "imageUrl": "assets/images/xbox-controller.png"
       }
-  ];
-
-  toggleImage(): void {
-    this.showImage = !this.showImage;
+    ]
   }
 
-  ngOnInit(): void {
-    console.log('In OnInit');
-  }
-
-  onRatingClicked(message: string): void {
-    this.pageTitle = 'Product List: ' + message;
-  }
-
-  performFilter(filterBy: string): IProduct[] {
-    filterBy.toLocaleLowerCase();
-    return this.products.filter((product: IProduct) =>
-      product.productName.toLocaleLowerCase().includes(filterBy));
-  }
-}
-
+ }
