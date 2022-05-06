@@ -4,7 +4,10 @@ import { IProduct } from "./product";
 // By keeping the product data in the service here, we
 // take data management away from the individual Component.
 // This makes it easier to modify|refuse the logic.
-@Injectable()
+// Setting @Injectable to 'root' makes the service available everywhere in app.
+@Injectable({
+  providedIn: 'root'
+})
 export class ProductService {
   getProducts(): IProduct[] {
     return [

@@ -1,13 +1,18 @@
 import { Component, OnInit } from "@angular/core";
 import { IProduct } from "./product";
+import { ProductService } from "./product.service";
 
+// 9.4: providers: [ProductService] brings in the new service that
+// contains the list of products. The list below should be removed later.
 @Component({
   selector: 'pm-products',
   templateUrl: './product-list.component.html',
+  providers: [ProductService],
   styleUrls: ['./product-list.component.css']
 })
 
 // Angular 9.3 - Building a Service
+// Angular 9.4 - Registering the Service
 
 export class ProductListComponent implements OnInit {
   pageTitle: string = 'Product List';
