@@ -14,7 +14,7 @@ import { IProduct } from "./product";
 export class ProductService {
   private productUrl = 'api/products/products.json';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getProducts(): Observable<IProduct[]> {
     return this.http.get<IProduct[]>(this.productUrl).pipe(
@@ -23,7 +23,7 @@ export class ProductService {
     );
   }
 
-  private handleError(err: HttpErrorResponse) {
+  private handleError(err: HttpErrorResponse): Observable<never> {
     // In a real world app, we may send the server to some remote logging infrastructure,
     // instead of just logging it to the console.
     let errorMessage = '';
