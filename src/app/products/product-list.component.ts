@@ -13,6 +13,8 @@ import { ProductService } from "./product.service";
 
 // Angular 10.2 - Observables and Reactive Extensions
 // Angular 10.3 - Using an Observable
+// Angular 10.4 - Setting Up an HTTP Request
+// Angular 10.5 - Demo: Setting Up an HTTP Request
 
 export class ProductListComponent implements OnInit {
   pageTitle: string = 'Product List';
