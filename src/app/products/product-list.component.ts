@@ -60,7 +60,7 @@ constructor(private productService: ProductService) {
     });
   }
 
-  ngOnDestroy(): void {
+  ngOnDestroy() {
     this.sub.unsubscribe();
   }
 
