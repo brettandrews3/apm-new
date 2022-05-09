@@ -11,9 +11,8 @@ import { ProductService } from "./product.service";
   styleUrls: ['./product-list.component.css']
 })
 
-// Angular 9.3 - Building a Service
-// Angular 9.4 - Registering the Service
-// Angular 9.5 - Injecting the Service
+// Angular 10.2 - Observables and Reactive Extensions
+// Angular 10.3 - Using an Observable
 
 export class ProductListComponent implements OnInit {
   pageTitle: string = 'Product List';
