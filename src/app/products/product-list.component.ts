@@ -6,7 +6,6 @@ import { ProductService } from "./product.service";
 // 9.4: providers: [ProductService] brings in the new service that
 // contains the list of products. The list below should be removed later.
 @Component({
-  selector: 'pm-products',
   templateUrl: './product-list.component.html',
   providers: [ProductService],
   styleUrls: ['./product-list.component.css']
@@ -15,6 +14,8 @@ import { ProductService } from "./product.service";
 // Angular 11.2 - Generating Code w/ Angular CLI
 // Angular 11.3 - How Routing Works
 // Angular 11.5 - Configuring Routes
+// Angular 11.6 - Tying Routes to Actions
+// Angular 11.7 - Placing the Views
 
 export class ProductListComponent implements OnInit, OnDestroy {
   pageTitle: string = 'Product List';
