@@ -13,6 +13,8 @@ import { ProductService } from "./product.service";
 })
 
 // Angular 11.2 - Generating Code w/ Angular CLI
+// Angular 11.3 - How Routing Works
+// Angular 11.5 - Configuring Routes
 
 export class ProductListComponent implements OnInit, OnDestroy {
   pageTitle: string = 'Product List';
