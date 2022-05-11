@@ -12,12 +12,7 @@ import { ProductService } from "./product.service";
   styleUrls: ['./product-list.component.css']
 })
 
-// Angular 10.2 - Observables and Reactive Extensions
-// Angular 10.3 - Using an Observable
-// Angular 10.4 - Setting Up an HTTP Request
-// Angular 10.5 - Demo: Setting Up an HTTP Request
-// Angular 10.6 - Exception Handling
-// Angular 10.7 - Subscribing to an Observable
+// Angular 11.2 - Generating Code w/ Angular CLI
 
 export class ProductListComponent implements OnInit, OnDestroy {
   pageTitle: string = 'Product List';
