@@ -11,11 +11,7 @@ import { ProductService } from "./product.service";
   styleUrls: ['./product-list.component.css']
 })
 
-// Angular 11.2 - Generating Code w/ Angular CLI
-// Angular 11.3 - How Routing Works
-// Angular 11.5 - Configuring Routes
-// Angular 11.6 - Tying Routes to Actions
-// Angular 11.7 - Placing the Views
+// Angular 12.2 - Passing Parameters to a Route
 
 export class ProductListComponent implements OnInit, OnDestroy {
   pageTitle: string = 'Product List';
