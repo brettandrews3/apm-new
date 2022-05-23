@@ -13,6 +13,7 @@ import { ProductService } from "./product.service";
 
 // Angular 12.2 - Passing Parameters to a Route
 // Angular 12.4 - Handling Null and Undefined
+// Angular 12.5 - Activating a Route with Code
 
 export class ProductListComponent implements OnInit, OnDestroy {
   pageTitle: string = 'Product List';
