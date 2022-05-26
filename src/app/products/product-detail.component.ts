@@ -31,4 +31,9 @@ export class ProductDetailComponent implements OnInit {
   onBack(): void {
     this.router.navigate(['/products']);
   }
+
+  // This function would be part of a process to add new products to the site.
+  onSubmit(): void {
+    this.router.navigate(['/products']);
+  }
 }
