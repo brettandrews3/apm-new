@@ -7,21 +7,23 @@ import { RouterModule } from '@angular/router';
 import { ProductModule } from './products/product.module';
 
 @NgModule({
+  // declarations[] identifies the components that belong to this module: AppComponent, WelcomeComponent
   declarations: [
-    AppComponent,
+    AppComponent,             // The root component
     WelcomeComponent,
     ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    RouterModule.forRoot([
-      { path: 'welcome', component: WelcomeComponent },
+    HttpClientModule,         // Registers the Angular HTTP service provider
+    RouterModule.forRoot([    // Passes in the configured routes for the root of the application
+      { path: 'welcome', component: WelcomeComponent },           // Configure the default routes
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-      { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
+      { path: '**', redirectTo: 'welcome', pathMatch: 'full' }    // Configure any wildcard routes
     ]),
+    // Then, import each feature module:
     ProductModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent]   // The bootstrap[] identifies the root component declared above
 })
 export class AppModule { }
